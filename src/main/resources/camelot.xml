@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugins-config xmlns="urn:config.camelot.qatools.yandex.ru">
+    <source>
+        <artifact>${project.groupId}:${project.artifactId}:${project.version}</artifact>
+        <broker>
+            <param name="concurrentConsumers" value="1"/>
+            <param name="maxConcurrentConsumers" value="20"/>
+            <param name="destination.consumer.prefetchSize" value="0"/>
+            <param name="maxMessagesPerTask" value="10"/>
+        </broker>
+        <plugin id="sender">
+            <aggregator>ru.yandex.qatools.camelot.sample.Sender</aggregator>
+            <resource>ru.yandex.qatools.camelot.sample.Resource</resource>
+            <broker>
+                <param name="maxConcurrentConsumers" value="50"/>
+            </broker>
+        </plugin>
+        <plugin source="sender" id="receiver1">
+            <aggregator>ru.yandex.qatools.camelot.sample.Receiver</aggregator>
+            <broker>
+                <param name="maxConcurrentConsumers" value="100"/>
+            </broker>
+        </plugin>
+        <plugin source="receiver1" id="receiver2">
+            <aggregator>ru.yandex.qatools.camelot.sample.Receiver</aggregator>
+            <broker>
+                <param name="maxConcurrentConsumers" value="70"/>
+            </broker>
+        </plugin>
+    </source>
+</plugins-config>
