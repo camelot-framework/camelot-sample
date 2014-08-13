@@ -12,5 +12,5 @@ cd camelot-sample
 mvn clean compile camelot-test:run
 ```
 
-Then you can find camelot at http://localhost:8080/camelot
+Then you can find camelot at [http://localhost:8080/camelot](http://localhost:8080/camelot)
 
