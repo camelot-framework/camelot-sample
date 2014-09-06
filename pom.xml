@@ -4,6 +4,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>7</version>
+    </parent>
+
     <groupId>ru.yandex.qatools.camelot.sample</groupId>
     <artifactId>camelot-sample</artifactId>
     <version>1.0-SNAPSHOT</version>
@@ -15,7 +21,7 @@
 
         <!--versions-->
         <java.version>1.7</java.version>
-        <camelot.version>2.0-SNAPSHOT</camelot.version>
+        <camelot.version>2.2-SNAPSHOT</camelot.version>
 
         <!--camelot config-->
         <jetty.port>8080</jetty.port>
@@ -24,6 +30,44 @@
         <activemq.brokers>tcp://localhost:61616</activemq.brokers>
         <camelot-test.runForked>false</camelot-test.runForked>
     </properties>
+
+    <organization>
+        <name>Yandex</name>
+        <url>http://company.yandex.com</url>
+    </organization>
+
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <issueManagement>
+        <system>GitHub Issues</system>
+        <url>https://github.com/camelot-framework/camelot-sample/issues</url>
+    </issueManagement>
+
+    <developers>
+        <developer>
+            <id>charlie</id>
+            <name>Baev Dmitry</name>
+            <email>charlie@yandex-team.ru</email>
+            <organization>Yandex</organization>
+        </developer>
+    </developers>
+
+    <mailingLists>
+        <mailingList>
+            <name>Camelot Mailing List</name>
+            <post>camelot@yandex-team.ru</post>
+        </mailingList>
+    </mailingLists>
+
+    <prerequisites>
+        <maven>3.1.1</maven>
+    </prerequisites>
 
     <build>
         <resources>
@@ -154,19 +198,6 @@
             <artifactId>lambdaj</artifactId>
             <version>2.3.3</version>
         </dependency>
-
     </dependencies>
 
-    <distributionManagement>
-        <repository>
-            <id>yandex_qa_releases</id>
-            <name>Releases</name>
-            <url>${releases-repo}</url>
-        </repository>
-        <snapshotRepository>
-            <id>yandex_qa_snapshots</id>
-            <name>Snapshots</name>
-            <url>${snapshots-repo}</url>
-        </snapshotRepository>
-    </distributionManagement>
 </project>
