@@ -5,7 +5,7 @@ Sample usage of Camelot.
 Use the following steps to start sample
 
 ```bash
-git clone git@github.com:camelot-framework/camelot-sample.git
+git clone https://github.com/camelot-framework/camelot-sample.git
 
 cd camelot-sample
 
