@@ -21,7 +21,7 @@
 
         <!--versions-->
         <java.version>1.7</java.version>
-        <camelot.version>2.2-SNAPSHOT</camelot.version>
+        <camelot.version>2.1.3</camelot.version>
 
         <!--camelot config-->
         <jetty.port>8080</jetty.port>
